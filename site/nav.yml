@@ -1,5 +1,7 @@
  -  name: Home
     url: ''
+ -  name: Blog
+    url: 'blog.html'
  -  name: About
     url: 'about.html'  
  -  name: Contact
