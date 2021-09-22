@@ -8,7 +8,7 @@
         <% for (const [key, post] of latest) { %>
           <div class="post-link">
             <div class="text">
-              <a href="<%=`/posts/${key}.html`%>"><%= post.title %></a>
+              <a class="title" href="<%=`/posts/${key}.html`%>"><%= post.title %></a>
 
               <% if (post.description) { %>
                 <p><%= post.description %></p>

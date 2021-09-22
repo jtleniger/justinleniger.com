@@ -4,10 +4,16 @@
   "main": "index.js",
   "license": "MIT",
   "type": "module",
+  "scripts": {
+    "serve": "node server.js",
+    "build": "node build.js && sass scss/style.scss dist/style.css",
+    "watch": "node watch.js"
+  },
   "dependencies": {
     "tinyjam": "^0.4.0"
   },
   "devDependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "node-watch": "^0.7.2"
   }
 }
