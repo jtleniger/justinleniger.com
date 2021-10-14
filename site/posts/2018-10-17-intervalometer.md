@@ -24,7 +24,7 @@ The documentation was somewhat vague on bulb shutter speed (it states it doesn't
 Initially, I explored a few different options for an interface using some sort of LCD screen. None were the right price for this project, but my friend had the excellent idea to use a web application for the interface. I wrote a very simple website using Flask, and set up the Raspberry Pi as an access point, as well as configuring it to run the Flask application on
 boot using Gunicorn.
 
-<lazy-image src="intervalometer-ui.png"></lazy-image>
+![Intervalometer User Interface](/images/intervalometer-ui.png)
 
 The interface allows you to start a capture sequence, specifying a shutter speed and an interval between shots. Under the hood, a request calls "process handler" which spawns a new process on the Pi, passing the parameters to a Python gphoto2 wrapper to execute the sequence, noting the PID.  This process writes a file telling its progress (which is watched by the UI), and can later be cancelled if necessary.
 I'm sure there are better ways to achieve this but it works and is stable, so it is sufficient for my purposes.
@@ -33,4 +33,4 @@ I'm sure there are better ways to achieve this but it works and is stable, so it
 
 I wouldn't recommend this route for anyone who has a camera with remote shutter support out of the box; it was a lot of time for something that's a few bucks. If you've got the D3400 and a knack for computers, this might be a cheaper route than upgrading your camera body. It's definitely not easier. With this intervalometer and a star tracker, I was able to capture this image from my back deck. Not a bad result.
 
-<lazy-image src="andromeda.jpg"></lazy-image>
+![Andromeda Galaxy](/images/andromeda.jpg)

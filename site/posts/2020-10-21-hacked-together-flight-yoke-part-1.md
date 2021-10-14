@@ -16,7 +16,7 @@ First, let's take the thing apart. Pictured above, there's not a whole lot insid
 
 Next, some innards. I figure this whole thing can sit in a wooden box, and I can design that later. 3D printer parts are cheap-ish now that they're so popular, so I figured I could make the pitch axis with some 8mm rods and LM8UU linear bearings. So far we're about $20 deep. I'm not sure what to do about the roll axis yet, but it seems like that's straightforward. I figured I'd need some sort of carriage for the rest of the stuff, so a very rudimentary first draft with some orange big box store angle aluminum is looking something like this:
 
-<lazy-image src="carriage-1.png"></lazy-image>
+![Carriage](/images/carriage-1.png)
 
 It's missing... many things, but this is the general idea. I'll need to add some way to center it (probably something with springs) and there needs to be... well everything with the linkage from the box to this carriage, so it knows where it is, and the entire roll axis is currently just a stick. Soon.
 
@@ -34,7 +34,7 @@ After hours of this YouTube channel [Antalz](https://www.youtube.com/c/antalz), 
 
 I needed to get from the rack down to the potentiometers range, which after measuring was about 120 degrees, or 1/3 of a turn. I also wanted to make this gear setup not take up much more range than the rods and linear bearings, so I wanted it to be compact. The result is a small gearbox that has 2, 2, and 1.5 ratios, and a pinion on the rack with a 1:2 ratio. I chose such a complex gearbox because my 3D printer sucks, so I wanted to keep the gear module as high as possible to give the printer a fighting chance. This is probably silly and I'll have to redesign it, but that's where we're at for now.
 
-<lazy-image src="gears-1.png"></lazy-image>
+![Gears](/images/gears-1.png)
 
 ## Next Steps
 

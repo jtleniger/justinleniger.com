@@ -1,7 +1,7 @@
 $background-color: #FCFCFC;
 
-$primary-color: #00367e;
-$dark-primary-color: #42A5F5;
+$primary-color: #B71C1C;
+$secondary-color: #E57373;
 $light-body-color: #616161;
 $body-color: #212121;
 $border-color: #BDBDBD;
@@ -10,7 +10,7 @@ $border-color: #BDBDBD;
 /*
 Font
 */
-$font-size: 20px;
+$font-size: 18px;
 
 /*
 Page
@@ -33,8 +33,7 @@ $screen-sm: 768px;
 }
 
 
-$title-font: 'Alegreya', serif;
-$body-font: 'Spectral', serif;
+$font: 'Spartan', sans-serif;
 
 /*
 Font
@@ -44,7 +43,7 @@ Font
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   box-sizing: border-box;
-  font-family: $body-font;
+  font-family: $font;
   font-size: $font-size;
   letter-spacing: 0.03em;
 }
@@ -60,7 +59,7 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-family: $title-font;
+  font-family: $font;
   font-weight: normal;
 }
 
@@ -73,14 +72,15 @@ h2 {
 }
 
 a {
-  text-decoration: none;
+  text-decoration-thickness: 1px;
   color: $primary-color;
   outline: none;
   transition: color 150ms ease;
-  font-family: $title-font;
+  font-family: $font;
+  font-weight: 900;
 
   &:hover {
-    color: $dark-primary-color;
+    color: $secondary-color;
   }
 }
 
@@ -93,10 +93,16 @@ blockquote {
 
 p {
   line-height: 1.5;
+  margin-top: 0.5rem;
 }
 
 em {
   color: $light-body-color;
+}
+
+li {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 blockquote {
@@ -150,7 +156,7 @@ nav {
 footer {
   @include page-width();
   padding: 1rem;
-  font-family: $title-font;
+  font-family: $font;
 
   p {
     text-align: center;
@@ -168,12 +174,18 @@ section {
 
     .post-link {
       border-bottom: 1px solid $border-color;
-      padding-bottom: 0.75rem;
-      margin-top: 0.75rem;
+      padding-bottom: 1rem;
+      margin-top: 1rem;
+      display: flex;
+      justify-content: space-between;
 
       a.title {
         font-size: 1.4rem;
         font-weight: bold;
+      }
+
+      .thumbnail {
+        max-width: 33%;
       }
     }
 
@@ -196,6 +208,12 @@ section {
       height: auto;
       margin: 0 auto;
       display: block;
+    }
+    
+    h1, h2 {
+      &:not(:first-child) {
+        margin-top: 1.5rem;
+      }
     }
   }
 }
