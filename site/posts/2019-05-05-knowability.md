@@ -2,6 +2,7 @@
 title: Knowability
 description: What can be known?
 date: 2019-05-05T05:00:09.378Z
+hero:
 ---
 
 It seems to me that there is a fundamental truth about what can be known. By that, I don't mean how many areas one can be an expert in, or how many trivia facts a human's brain can hold. I'm talking about the edges of what an intelligence can learn about reality itself. That truth is the following:
