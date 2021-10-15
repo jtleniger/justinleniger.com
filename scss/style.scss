@@ -189,16 +189,16 @@ section {
       }
     }
 
-    section {
-      margin: 1rem 0;
-
-      &.main-image {
-        border: none;
+    .title {
+      h1 {
+        font-weight: 900;
+        margin-bottom: 1rem;
       }
+    }
 
-      &.title {
-        padding-bottom: 1rem;
-      }
+    .hero {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
     }
 
     img {
