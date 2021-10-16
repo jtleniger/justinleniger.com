@@ -177,6 +177,7 @@ section {
       padding-bottom: 1rem;
       margin-top: 1rem;
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
 
       a.title {
@@ -184,8 +185,18 @@ section {
         font-weight: bold;
       }
 
-      .thumbnail {
-        max-width: 33%;
+      .text {
+        margin-bottom: 1rem;
+      }
+
+      @media (min-width: $screen-sm) {
+        .text {
+          max-width: 65%;
+        }
+
+        .thumbnail {
+          max-width: 33%;
+        }
       }
     }
 
