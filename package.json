@@ -10,7 +10,7 @@
     "watch": "node watch.js"
   },
   "dependencies": {
-    "node-sass": "^6.0.1",
+    "node-sass": "^7.0.0",
     "tinyjam": "^0.4.0"
   },
   "devDependencies": {
