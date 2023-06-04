@@ -34,14 +34,14 @@ h2 {
 
 a {
   text-decoration-thickness: 1px;
-  color: $primary-500;
+  color: $primary-400;
   outline: none;
   transition: color 50ms ease;
   font-family: $font;
   font-weight: 900;
 
   &:hover {
-    color: $primary-300;
+    color: $primary-100;
   }
 }
 
