@@ -1,120 +1,9 @@
-$background-color: #FCFCFC;
+@import 'colors';
+@import 'typeography';
+@import 'layout';
 
-$primary-color: #B71C1C;
-$secondary-color: #E57373;
-$light-body-color: #616161;
-$body-color: #212121;
-$border-color: #BDBDBD;
-
-
-/*
-Font
-*/
-$font-size: 18px;
-
-/*
-Page
-*/
-$page-width-lg: 85%;
-$page-width-sm: 100%;
-$content-width: 960px;
-
-/*
-Responsive
-*/
-$screen-sm: 768px;
-
-@mixin page-width() {
-    width: $page-width-sm;
-
-    @media (min-width: $screen-sm) {
-        width: $page-width-lg;
-    }
-}
-
-
-$font: 'Spartan', sans-serif;
-
-/*
-Font
-*/
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  box-sizing: border-box;
-  font-family: $font;
-  font-size: $font-size;
-  letter-spacing: 0.03em;
-}
-
-/*
-Typography
-*/
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  font-family: $font;
-  font-weight: normal;
-}
-
-h1 {
-  font-size: 1.8rem;
-}
-
-h2 {
-  font-size: 1.6rem;
-}
-
-a {
-  text-decoration-thickness: 1px;
-  color: $primary-color;
-  outline: none;
-  transition: color 150ms ease;
-  font-family: $font;
-  font-weight: 900;
-
-  &:hover {
-    color: $secondary-color;
-  }
-}
-
-blockquote {
-  // background-color: $grey-900;
-  padding: 0.1em 1em;
-  border-radius: 0.5em;
-  margin: 1em 0;
-}
-
-p {
-  line-height: 1.5;
-  margin-top: 0.5rem;
-}
-
-em {
-  color: $light-body-color;
-}
-
-li {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-blockquote {
-  font-style: italic;
-  color: $light-body-color;
-}
-
-/*
-Page
-*/
 body {
-  background-color: background-color;
+  background-color: $grey-900;
   margin: 0;
   padding: 0;
   display: flex;
@@ -122,7 +11,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   min-height: 100vh;
-  color: $body-color;
+  color: $grey-100;
 }
 
 main {
@@ -173,7 +62,7 @@ section {
     margin: 0 auto;
 
     .post-link {
-      border-bottom: 1px solid $border-color;
+      border-bottom: 1px solid $grey-500;
       padding-bottom: 1rem;
       margin-top: 1rem;
       display: flex;
