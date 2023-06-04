@@ -1,7 +1,5 @@
-$page-width-lg: 85%;
+$page-width-lg: 728px;
 $page-width-sm: 100%;
-$content-width: 960px;
-
 $screen-sm: 768px;
 
 @mixin page-width() {
@@ -10,4 +8,9 @@ $screen-sm: 768px;
     @media (min-width: $screen-sm) {
         width: $page-width-lg;
     }
+}
+
+main {
+    @include page-width();
+    flex: 1;
 }

@@ -5,7 +5,6 @@
 body {
   background-color: $grey-900;
   margin: 0;
-  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -14,106 +13,84 @@ body {
   color: $grey-100;
 }
 
-main {
-  @include page-width();
-  flex: 1;
-}
-
 nav {
   @include page-width();
   padding: 1rem;
-  font-size: 1.25rem;
+  background-color: $grey-800;
   
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-
-  @media (min-width: $screen-sm) {
-    justify-content: space-between;
-  }
+  justify-content: space-between;
 
   section.links {
     display: flex;
     align-items: center;
 
     a {
+      color: $primary-300;
       margin-right: 1em;
+      font-size: 1.25rem;
+
+      &:hover {
+        color: $primary-100;
+      }
     }
   }
 }
 
+main {
+  padding: 1rem;
+}
+
 footer {
   @include page-width();
-  padding: 1rem;
-  font-family: $font;
+  margin-top: 1rem;
 
   p {
     text-align: center;
   }
 }
 
-/*
-Sections
-*/
-section {
-  &.content {
-    padding: 2rem;
-    max-width: $content-width;
-    margin: 0 auto;
 
-    .post-link {
-      border-bottom: 1px solid $grey-500;
-      padding-bottom: 1rem;
-      margin-top: 1rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
 
-      a.title {
-        font-size: 1.4rem;
-        font-weight: bold;
-      }
+.post-link {
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
 
-      .text {
-        margin-bottom: 1rem;
-      }
+  a.title {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
 
-      @media (min-width: $screen-sm) {
-        .text {
-          max-width: 65%;
-        }
-
-        .thumbnail {
-          max-width: 33%;
-        }
-      }
-    }
-
-    .title {
-      h1 {
-        font-weight: 900;
-        margin-bottom: 1rem;
-      }
-    }
-
-    .hero {
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    img {
-      max-width: 100%;
-      max-height: 90vh;
-      width: auto;
-      height: auto;
-      margin: 0 auto;
-      display: block;
-    }
-    
-    h1, h2 {
-      &:not(:first-child) {
-        margin-top: 1.5rem;
-      }
-    }
+  p.subtitle {
+    margin: 0.5rem 0;
   }
 }
+
+.title {
+  h1 {
+    font-weight: 900;
+    margin-bottom: 1rem;
+  }
+}
+
+.hero {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+img {
+  max-width: 100%;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+h1, h2 {
+  &:not(:first-child) {
+    margin-top: 1.5rem;
+  }
+}
+  

@@ -1,29 +1,22 @@
 <%- include('_header.ejs') -%>
-<section class="content">
-  <h2>Latest Posts</h2>
-  <% const count = 5 %>
 
-  <% const latest = Object.entries(posts).sort((a, b) => b[1].date - a[1].date).slice(0, count) %>
+<h2>Latest Posts</h2>
+<% const count = 5 %>
 
-  <% for (const [key, post] of latest) { %>
-    <div class="post-link">
-      <div class="text">
-        <a class="title" href="<%=`/posts/${key}.html`%>"><%= post.title %></a>
+<% const latest = Object.entries(posts).sort((a, b) => b[1].date - a[1].date).slice(0, count) %>
 
-        <% if (post.description) { %>
-          <p><%= post.description %></p>
-        <% } %>
-        
-        <% if (post.date) { %>
-          <em class="date"><%= new Date(post.date).toLocaleDateString() %></em>
-        <% } %>
-      </div>
-      <div class="thumbnail">
-        <% if (post.hero) { %>
-          <img src="/images/thumbs/<%= post.hero%>" alt="<%= post.title %>">
-        <% } %>
-      </div>
-    </div>
-  <% } %>
-</section>
+<% for (const [key, post] of latest) { %>
+  <div class="post-link">
+    <a class="title" href="<%=`/posts/${key}.html`%>"><%= post.title %></a>
+
+    <% if (post.description) { %>
+      <p class="subtitle"><%= post.description %></p>
+    <% } %>
+    
+    <% if (post.date) { %>
+      <em class="date"><%= new Date(post.date).toLocaleDateString() %></em>
+    <% } %>
+  </div>
+<% } %>
+
 <%- include('_footer.ejs') -%>

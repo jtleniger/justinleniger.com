@@ -1,6 +1,6 @@
-$font-size: 18px;
+$font-size: 12px;
 
-$font: 'Spartan', sans-serif;
+$font: Verdana, Geneva, sans-serif;
 
 * {
     -webkit-font-smoothing: antialiased;
@@ -9,7 +9,6 @@ $font: 'Spartan', sans-serif;
     box-sizing: border-box;
     font-family: $font;
     font-size: $font-size;
-    letter-spacing: 0.03em;
 }
 
 h1,
@@ -25,17 +24,19 @@ h6 {
 
 h1 {
   font-size: 1.8rem;
+  margin: 1rem 0;
 }
 
 h2 {
   font-size: 1.6rem;
+  margin-bottom: 1rem;
 }
 
 a {
   text-decoration-thickness: 1px;
   color: $primary-500;
   outline: none;
-  transition: color 150ms ease;
+  transition: color 50ms ease;
   font-family: $font;
   font-weight: 900;
 

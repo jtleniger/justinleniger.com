@@ -16,7 +16,7 @@ const build = debounce(() => {
   console.time("took")
 
   try {
-    execSync("yarn build", { stdio: 'inherit' })
+    execSync("pnpm build", { stdio: 'inherit' })
   } catch (error) {
     console.error(error.message)
   }
